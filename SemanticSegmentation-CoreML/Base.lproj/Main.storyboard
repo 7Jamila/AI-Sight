@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OKs-u2-zxf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player-->
+        <scene sceneID="WLo-cG-IgY">
+            <objects>
+                <hostingController id="mmk-JK-pDx" customClass="PlayerHostingController" customModule="SemanticSegmentation_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Player" image="music.note.tv" catalog="system" id="Blg-Uk-icB"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Je-lp-V3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="-566"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="caK-0V-iKQ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="OKs-u2-zxf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6lN-ng-pc1"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k8X-uG-0Ob">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mmk-JK-pDx" kind="relationship" relationship="viewControllers" id="ydt-os-zC2"/>
+                        <segue destination="e8o-TX-ama" kind="relationship" relationship="viewControllers" id="OyT-Yk-PyN"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wKr-1F-xNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="106" y="-232"/>
+        </scene>
+        <!--Settings Hosting Controller-->
+        <scene sceneID="6zJ-oa-PEr">
+            <objects>
+                <hostingController id="YgW-jA-zmu" customClass="SettingsHostingController" customModule="SemanticSegmentation_CoreML" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vyO-Mc-wPS"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wjq-gc-kIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2025" y="135"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="GlJ-aa-ZAP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e8o-TX-ama" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" id="sp8-j9-T0q"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Q4Y-sz-XYx">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YgW-jA-zmu" kind="relationship" relationship="rootViewController" id="Xor-5s-DgM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Npb-7d-2hf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="134.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape" catalog="system" width="32" height="32"/>
+        <image name="music.note.tv" catalog="system" width="32" height="32"/>
+    </resources>
+</document>
